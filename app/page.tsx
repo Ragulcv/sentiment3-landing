@@ -21,6 +21,7 @@ import {
   Sparkles,
   Play,
   ChevronRight,
+  HelpCircle,
 } from 'lucide-react'
 
 // ============================================
@@ -37,9 +38,8 @@ function Navigation() {
   }, [])
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      scrolled ? 'bg-cream/90 backdrop-blur-lg border-b border-sand/50' : ''
-    }`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-cream/90 backdrop-blur-lg border-b border-sand/50' : ''
+      }`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -140,20 +140,20 @@ function HeroSection() {
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-midnight leading-[1.05] tracking-tight">
               Turn CMC presence into{' '}
               <span className="relative inline-block">
-                <span className="relative z-10">price action</span>
+                <span className="relative z-10">token visibility</span>
                 <span className="absolute bottom-2 left-0 right-0 h-4 bg-lime/40 -rotate-1" />
               </span>
             </h1>
 
             {/* Subhead */}
             <p className="text-xl text-slate max-w-lg leading-relaxed">
-              Systematic sentiment management that drives trading volume and community confidence. Not random posting. Not expensive agencies.
+              Systematic distribution + creator activation on CMC Community and Binance Square. Built for consistency, trust, and measurable attention.
             </p>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a href="#pricing" className="btn-lime flex items-center justify-center gap-2 text-lg px-8 py-4">
-                Start with $699
+                Get started
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a href="#how-it-works" className="btn-secondary flex items-center justify-center gap-2 text-lg px-8 py-4">
@@ -168,13 +168,13 @@ function HeroSection() {
                   <div className="w-8 h-8 rounded-full bg-midnight flex items-center justify-center">
                     <Users className="w-4 h-4 text-lime" />
                   </div>
-                  <span><strong className="text-midnight">100+</strong> verified KOLs</span>
+                  <span>Creator network <strong className="text-midnight">(micro + featured)</strong></span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-midnight flex items-center justify-center">
                     <Clock className="w-4 h-4 text-lime" />
                   </div>
-                  <span><strong className="text-midnight">6 years</strong> Web3 marketing</span>
+                  <span><strong className="text-midnight">Web3</strong> growth operators</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-midnight flex items-center justify-center">
@@ -265,7 +265,7 @@ function HeroSection() {
               <div className="flex items-center justify-between mt-6 pt-6 border-t border-white/10">
                 <div className="flex items-center gap-2">
                   <Sparkles className="w-4 h-4 text-lime" />
-                  <span className="text-white/70 text-sm">1.2K votes today</span>
+                  <span className="text-white/70 text-sm">Real-time tracking</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-lime rounded-full animate-pulse" />
@@ -282,7 +282,7 @@ function HeroSection() {
                 </div>
                 <div>
                   <div className="font-display font-bold text-midnight">+156%</div>
-                  <div className="text-xs text-slate">Volume 24h</div>
+                  <div className="text-xs text-slate">Visibility 24h</div>
                 </div>
               </div>
             </div>
@@ -293,7 +293,7 @@ function HeroSection() {
                   <Users className="w-5 h-5 text-lavender" />
                 </div>
                 <div>
-                  <div className="font-display font-bold text-midnight">47 KOLs</div>
+                  <div className="font-display font-bold text-midnight">47 Creators</div>
                   <div className="text-xs text-slate">Active this week</div>
                 </div>
               </div>
@@ -312,12 +312,12 @@ function TrustMarquee() {
   const items = [
     'CMC Presence',
     'Binance Square',
-    'Sentiment Votes',
-    'KOL Activation',
-    'Volume Correlation',
+    'Sentiment Waves',
+    'Creator Activation',
+    'Visibility Tracking',
     'Strategic Narrative',
     'Community Trust',
-    'Price Action',
+    'Measurable attention',
   ]
 
   return (
@@ -387,7 +387,7 @@ function ProblemSection() {
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
                   'Consistent CMC & Binance Square presence',
-                  'Positive sentiment from verified KOLs',
+                  'Creator network activation',
                   'Coordinated posting strategy',
                   'Measurable, transparent results',
                 ].map((item, i) => (
@@ -420,22 +420,22 @@ function HowItWorksSection() {
   const steps = [
     {
       num: '01',
-      title: 'Systematic Content Creation',
-      desc: '20-40 custom CMC posts/month. Strategic narrative sequencing. Binance Square updates. All aligned with your token story.',
+      title: 'Systematic Content Distribution',
+      desc: '20-60 custom CMC posts/month. Strategic narrative sequencing. Binance Square updates. All aligned with your token story.',
       icon: Target,
       color: 'lime',
     },
     {
       num: '02',
-      title: 'Curated KOL Activation',
-      desc: '30-50 verified influencers. Coordinated campaigns. Sentiment voting boosts. Real engagement from real accounts.',
+      title: 'Creator Network Activation',
+      desc: 'Sentiment Waves (micro-creator bursts) + Featured Creator posts. Coordinated campaigns. Real engagement from real accounts.',
       icon: Users,
       color: 'lavender',
     },
     {
       num: '03',
       title: 'Measurable Results',
-      desc: 'Real-time dashboard. Volume correlation tracking. Full transparency on every post, vote, and activation.',
+      desc: 'Real-time dashboard. Sentiment movement tracking. Full transparency on every post and activation.',
       icon: BarChart2,
       color: 'mint',
     },
@@ -472,14 +472,12 @@ function HowItWorksSection() {
                   <span className="text-6xl font-display font-bold text-sand group-hover:text-midnight/10 transition-colors">
                     {step.num}
                   </span>
-                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center ${
-                    step.color === 'lime' ? 'bg-lime/20' :
+                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center ${step.color === 'lime' ? 'bg-lime/20' :
                     step.color === 'lavender' ? 'bg-lavender/20' : 'bg-mint/20'
-                  }`}>
-                    <step.icon className={`w-7 h-7 ${
-                      step.color === 'lime' ? 'text-lime-dim' :
+                    }`}>
+                    <step.icon className={`w-7 h-7 ${step.color === 'lime' ? 'text-lime-dim' :
                       step.color === 'lavender' ? 'text-lavender' : 'text-mint'
-                    }`} />
+                      }`} />
                   </div>
                 </div>
 
@@ -494,12 +492,19 @@ function HowItWorksSection() {
           ))}
         </div>
 
+        {/* Sentiment Waves definition */}
+        <div className="mt-16 mb-8 bg-sand/30 rounded-2xl p-6 max-w-3xl mx-auto border border-sand">
+          <p className="text-slate text-center leading-relaxed">
+            <strong className="text-midnight font-display">Sentiment Waves</strong> = micro-creator activation bursts that amplify reach and engagement. We track sentiment movement as an outcome.
+          </p>
+        </div>
+
         {/* Bottom tagline */}
-        <div className="mt-16 text-center">
+        <div className="text-center">
           <div className="inline-flex items-center gap-4 bg-midnight text-white px-8 py-4 rounded-full">
             <Zap className="w-5 h-5 text-lime" />
             <span className="font-display font-medium">
-              Content → KOL Push → Sentiment Boost → Volume
+              Content → Creator Activation → Sentiment Tracking → Visibility
             </span>
             <TrendingUp className="w-5 h-5 text-lime" />
           </div>
@@ -569,7 +574,7 @@ function ComparisonSection() {
           {/* Sentiment3 */}
           <div className="bg-midnight rounded-3xl p-8 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-lime/20 rounded-full blur-[60px] pointer-events-none" />
-            <div className="absolute -top-3 -right-3">
+            <div className="absolute -top-3 left-6">
               <span className="bg-lime text-midnight text-xs font-display font-bold px-3 py-1 rounded-full">
                 Best value
               </span>
@@ -578,7 +583,7 @@ function ComparisonSection() {
             <h3 className="font-display font-bold text-xl text-white mb-6 relative">Sentiment3</h3>
             <div className="space-y-4 relative">
               {[
-                '$699-$3,499/month',
+                '$1,250-$5,900/month',
                 'Full transparency',
                 'Cancel anytime',
                 'Productized system',
@@ -598,7 +603,7 @@ function ComparisonSection() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { icon: Zap, title: 'Productized system', desc: 'Repeatable, not custom' },
-            { icon: Users, title: '100+ curated KOLs', desc: 'Ready to deploy' },
+            { icon: Users, title: 'Creator network', desc: 'Ready to activate' },
             { icon: Eye, title: 'Full transparency', desc: 'See every action' },
             { icon: Shield, title: '6 years experience', desc: 'Battle-tested' },
           ].map((item, i) => (
@@ -619,75 +624,173 @@ function ComparisonSection() {
 }
 
 // ============================================
+// CAMPAIGNS SECTION
+// ============================================
+function CampaignsSection() {
+  return (
+    <section className="section-padding bg-cream">
+      <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="bg-mist rounded-3xl p-8 lg:p-12 border border-sand">
+          <div className="text-center mb-8">
+            <span className="tag tag-lime mb-4">Creator Ads</span>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-midnight mb-4">
+              Campaigns (CPV Model)
+            </h2>
+            <p className="text-lg text-slate max-w-2xl mx-auto">
+              For major announcements, run CPV-based creator campaigns with Standard and Verified inventory. Budget-based. Transparent reporting.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-3 gap-6">
+            <div className="bg-cream rounded-2xl p-6 border border-sand">
+              <div className="w-12 h-12 rounded-xl bg-lime/10 flex items-center justify-center mb-4">
+                <DollarSign className="w-6 h-6 text-lime-dim" />
+              </div>
+              <h3 className="font-display font-semibold text-midnight mb-2">Budget starts at $1,000</h3>
+              <p className="text-sm text-slate">Self-serve campaigns available</p>
+            </div>
+            <div className="bg-cream rounded-2xl p-6 border border-sand">
+              <div className="w-12 h-12 rounded-xl bg-lavender/10 flex items-center justify-center mb-4">
+                <Target className="w-6 h-6 text-lavender" />
+              </div>
+              <h3 className="font-display font-semibold text-midnight mb-2">Managed campaigns</h3>
+              <p className="text-sm text-slate">Full service option available</p>
+            </div>
+            <div className="bg-cream rounded-2xl p-6 border border-sand">
+              <div className="w-12 h-12 rounded-xl bg-mint/10 flex items-center justify-center mb-4">
+                <Users className="w-6 h-6 text-mint" />
+              </div>
+              <h3 className="font-display font-semibold text-midnight mb-2">Standard vs Verified</h3>
+              <p className="text-sm text-slate">Choose your creator tier</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ============================================
+// SENTIMENT WAVE TOOLTIP
+// ============================================
+function SentimentWaveTooltip() {
+  return (
+    <div className="group/tooltip relative inline-block">
+      <HelpCircle className="w-3.5 h-3.5 text-slate/60 hover:text-lime cursor-help transition-colors ml-1" />
+
+      {/* Tooltip content */}
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 opacity-0 invisible group-hover/tooltip:opacity-100 group-hover/tooltip:visible transition-all duration-200 z-50 pointer-events-none group-hover/tooltip:pointer-events-auto">
+        <div className="bg-midnight rounded-2xl p-4 shadow-2xl border border-lime/20 w-72">
+          <div className="text-center mb-3">
+            <h4 className="font-display font-bold text-white text-sm mb-1">Sentiment Wave</h4>
+            <p className="text-white/60 text-xs">Coordinated micro-creator activation</p>
+          </div>
+
+          <div className="space-y-2 max-h-48 overflow-y-auto scrollbar-thin">
+            <div className="bg-charcoal rounded-lg p-3 border border-white/5">
+              <div className="flex items-center gap-2 mb-1">
+                <div className="w-6 h-6 rounded-full bg-lime/20 flex items-center justify-center flex-shrink-0">
+                  <Users className="w-3 h-3 text-lime" />
+                </div>
+                <span className="text-white text-xs font-display font-semibold">5-10 Micro-creators</span>
+              </div>
+              <p className="text-white/50 text-xs">Coordinated posts from vetted accounts</p>
+            </div>
+
+            <div className="bg-charcoal rounded-lg p-3 border border-white/5">
+              <div className="flex items-center gap-2 mb-1">
+                <div className="w-6 h-6 rounded-full bg-mint/20 flex items-center justify-center flex-shrink-0">
+                  <Zap className="w-3 h-3 text-mint" />
+                </div>
+                <span className="text-white text-xs font-display font-semibold">24-48hr Burst</span>
+              </div>
+              <p className="text-white/50 text-xs">Timed for maximum impact</p>
+            </div>
+
+            <div className="bg-charcoal rounded-lg p-3 border border-white/5">
+              <div className="flex items-center gap-2 mb-1">
+                <div className="w-6 h-6 rounded-full bg-lavender/20 flex items-center justify-center flex-shrink-0">
+                  <BarChart2 className="w-3 h-3 text-lavender" />
+                </div>
+                <span className="text-white text-xs font-display font-semibold">Tracked Sentiment</span>
+              </div>
+              <p className="text-white/50 text-xs">Measure engagement & reach</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Arrow pointer */}
+        <div className="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-midnight/90"></div>
+      </div>
+    </div>
+  )
+}
+
+// ============================================
 // PRICING SECTION
 // ============================================
 function PricingSection() {
   const plans = [
     {
-      name: 'Experimental',
-      price: '$699',
+      name: 'Test Drive',
+      price: '$1,250',
       period: 'one-time',
-      desc: 'Test before committing',
+      desc: 'Proof before commitment',
       features: [
-        '1 month duration',
-        '20 custom CMC posts',
-        '40-50 sentiment votes',
-        '30 micro-KOL pushes',
-        '2-3 reputable KOL activations',
-        'Dashboard access',
+        '20 CMC Community posts / month',
+        '1 Sentiment Wave / month',
+        '1 Featured Creator post / month',
+        'Dashboard + weekly report',
       ],
       highlight: false,
       badge: null,
     },
     {
-      name: 'Starter',
-      price: '$899',
+      name: 'Core',
+      price: '$1,950',
       period: '/month',
-      desc: 'For pre-TGE tokens',
+      desc: 'Always-on presence',
       features: [
-        'Everything in Experimental',
-        '30 CMC posts/month',
-        '60-80 sentiment votes',
-        '40 micro-KOL pushes',
-        '5 reputable KOL activations',
-        'Weekly strategy calls',
+        '30 CMC Community posts / month',
+        '2 Sentiment Waves / month',
+        '2 Featured Creator posts / month',
+        'Dashboard + weekly report',
+        '1 strategy call / month',
       ],
       highlight: false,
       badge: null,
     },
     {
       name: 'Growth',
-      price: '$2,199',
+      price: '$3,750',
       period: '/month',
       desc: 'For scaling projects',
       features: [
-        'Everything in Starter',
-        '40 CMC posts/month',
-        '100+ sentiment votes',
-        '50 micro-KOL pushes',
-        '10 reputable KOLs',
-        'Binance Square coverage',
+        '40 CMC Community posts / month',
+        '3 Sentiment Waves / month',
+        '4 Featured Creator posts / month',
+        'Binance Square cadence included',
         'Dedicated manager',
+        'Dashboard + weekly report + optimization notes',
       ],
       highlight: true,
       badge: 'Most popular',
     },
     {
       name: 'Launch',
-      price: '$3,499',
+      price: '$5,900',
       period: '/month',
       desc: 'For major launches',
       features: [
-        'Everything in Growth',
-        'Unlimited CMC posts',
-        '200+ sentiment votes',
-        'Full KOL network',
-        '20+ premium KOLs',
-        'Crisis management',
-        '24/7 priority support',
+        '60 CMC Community posts / month',
+        '4 Sentiment Waves / month',
+        '8 Featured Creator posts / month',
+        'Binance Square priority',
+        'Priority response SLA',
+        'Weekly executive summary',
       ],
       highlight: false,
-      badge: 'Enterprise',
+      badge: null,
     },
   ]
 
@@ -701,7 +804,7 @@ function PricingSection() {
             Simple, transparent pricing
           </h2>
           <p className="text-xl text-slate">
-            Start with Experimental to test. Scale when you're ready. Cancel anytime.
+            Start with Test Drive to validate. Scale when you're ready. Cancel anytime.
           </p>
         </div>
 
@@ -710,33 +813,29 @@ function PricingSection() {
           {plans.map((plan, i) => (
             <div
               key={i}
-              className={`relative rounded-3xl p-6 transition-all card-hover ${
-                plan.highlight
-                  ? 'bg-midnight text-white ring-4 ring-lime/30'
-                  : 'bg-mist border border-sand'
-              }`}
+              className={`relative rounded-3xl p-6 transition-all card-hover flex flex-col ${plan.highlight
+                ? 'bg-midnight text-white ring-4 ring-lime/30'
+                : 'bg-mist border border-sand'
+                }`}
             >
               {plan.badge && (
-                <div className={`absolute -top-3 left-6 px-3 py-1 rounded-full text-xs font-display font-bold ${
-                  plan.highlight ? 'bg-lime text-midnight' : 'bg-midnight text-white'
-                }`}>
+                <div className={`absolute -top-3 left-6 px-3 py-1 rounded-full text-xs font-display font-bold ${plan.highlight ? 'bg-lime text-midnight' : 'bg-midnight text-white'
+                  }`}>
                   {plan.badge}
                 </div>
               )}
 
               <div className="mb-6 pt-2">
-                <h3 className={`font-display font-bold text-xl mb-2 ${
-                  plan.highlight ? 'text-white' : 'text-midnight'
-                }`}>
+                <h3 className={`font-display font-bold text-xl mb-2 ${plan.highlight ? 'text-white' : 'text-midnight'
+                  }`}>
                   {plan.name}
                 </h3>
                 <p className={`text-sm mb-4 ${plan.highlight ? 'text-white/60' : 'text-slate'}`}>
                   {plan.desc}
                 </p>
                 <div className="flex items-baseline gap-1">
-                  <span className={`text-4xl font-display font-bold ${
-                    plan.highlight ? 'text-lime' : 'text-midnight'
-                  }`}>
+                  <span className={`text-4xl font-display font-bold ${plan.highlight ? 'text-lime' : 'text-midnight'
+                    }`}>
                     {plan.price}
                   </span>
                   <span className={plan.highlight ? 'text-white/50' : 'text-slate'}>
@@ -745,37 +844,46 @@ function PricingSection() {
                 </div>
               </div>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-8 flex-grow">
                 {plan.features.map((feature, j) => (
                   <li key={j} className="flex items-start gap-3">
-                    <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                      plan.highlight ? 'bg-lime' : 'bg-midnight'
-                    }`}>
-                      <Check className={`w-3 h-3 ${
-                        plan.highlight ? 'text-midnight' : 'text-lime'
-                      }`} />
+                    <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${plan.highlight ? 'bg-lime' : 'bg-midnight'
+                      }`}>
+                      <Check className={`w-3 h-3 ${plan.highlight ? 'text-midnight' : 'text-lime'
+                        }`} />
                     </div>
-                    <span className={`text-sm ${plan.highlight ? 'text-white/80' : 'text-slate'}`}>
-                      {feature}
+                    <span className={`text-sm ${plan.highlight ? 'text-white/80' : 'text-slate'} flex items-baseline flex-wrap`}>
+                      {feature.includes('Sentiment Wave') ? (
+                        <>
+                          {feature}
+                          <SentimentWaveTooltip />
+                        </>
+                      ) : (
+                        feature
+                      )}
                     </span>
                   </li>
                 ))}
               </ul>
 
-              <button className={`w-full py-3 rounded-full font-display font-medium transition-all ${
-                plan.highlight
-                  ? 'bg-lime text-midnight hover:bg-lime-dim'
-                  : 'bg-midnight text-white hover:bg-charcoal'
-              }`}>
+              <button className={`w-full py-3 rounded-full font-display font-medium transition-all mt-auto ${plan.highlight
+                ? 'bg-lime text-midnight hover:bg-lime-dim'
+                : 'bg-midnight text-white hover:bg-charcoal'
+                }`}>
                 Get started
               </button>
             </div>
           ))}
         </div>
 
-        <p className="text-center text-slate mt-10">
-          All plans include dashboard access and Slack support. Need custom? <a href="#final-cta" className="text-midnight underline">Let's talk</a>
-        </p>
+        <div className="mt-12 text-center">
+          <p className="text-slate mb-4">
+            All plans include dashboard access and Slack support. Need custom? <a href="#final-cta" className="text-midnight underline">Let's talk</a>
+          </p>
+          <p className="text-sm text-slate">
+            <strong className="text-midnight">Add-ons:</strong> Extra Sentiment Waves, Featured Creator packs, and CPV Campaigns for major announcements.
+          </p>
+        </div>
       </div>
     </section>
   )
@@ -799,14 +907,14 @@ function SocialProofSection() {
             Join 20 founding projects
           </h2>
           <p className="text-xl text-white/60">
-            Early access pricing won't last. Lock in Experimental at $699 before we scale.
+            Early access pricing won't last. Lock in Test Drive at $1,250 before we scale.
           </p>
         </div>
 
         {/* Stats */}
         <div className="grid sm:grid-cols-3 gap-8 mb-16">
           {[
-            { num: '100+', label: 'Verified KOLs' },
+            { num: '100+', label: 'Creators' },
             { num: '6 Years', label: 'Web3 Experience' },
             { num: '200+', label: 'Agency Network' },
           ].map((stat, i) => (
@@ -840,28 +948,28 @@ function FAQSection() {
 
   const faqs = [
     {
-      q: "What exactly do I get with the Experimental plan?",
-      a: "1 month of coverage: 20 custom CMC posts, 40-50 sentiment votes, 30 micro-KOL pushes, 2-3 reputable KOL activations, and full dashboard access. It's designed to show you results before you commit to a subscription.",
+      q: "Do you guarantee price action or volume?",
+      a: "No. We deliver consistent distribution and activation, then report measurable reach and attention signals. Market outcomes are influenced by many factors.",
     },
     {
-      q: "How do you verify your KOLs are real?",
-      a: "6 years of relationship building. Every KOL is manually vetted for follower authenticity, engagement rates, and past performance. No bots. No fake accounts. Real humans with real audiences.",
+      q: "What is a Sentiment Wave?",
+      a: "A coordinated micro-creator activation burst that amplifies reach and engagement around your token updates. We track sentiment movement as an outcome.",
     },
     {
-      q: "What's the difference between micro-KOLs and reputable KOLs?",
-      a: "Micro-KOLs (1K-10K followers) provide consistent sentiment building. Reputable KOLs (50K+) drive bigger visibility spikes. We use both strategically for sustained growth.",
+      q: "Are creators real?",
+      a: "Yes. We run a tiered creator network (micro and featured) with proof links and performance tracking. 6 years of relationship building. Every creator is manually vetted for authenticity.",
     },
     {
-      q: "How quickly will I see results?",
-      a: "Increased CMC activity within the first week. Sentiment shifts in 2-3 weeks. Volume correlation varies, but our dashboard lets you track the connection in real-time.",
+      q: "Do you provide listings?",
+      a: "No. We don't offer listing services or guarantee listings. Our focus is on distribution and visibility after you've already launched.",
     },
     {
       q: "Can I cancel anytime?",
-      a: "Yes. Unlike agencies with 3-month minimums, our plans are month-to-month after the initial period. We earn your business every month.",
+      a: "Yes. Unlike agencies with 3-month minimums, our plans are month-to-month. We earn your business every month.",
     },
     {
-      q: "Do you work beyond CMC?",
-      a: "Our core focus is CMC and Binance Square—highest leverage platforms for crypto sentiment. Growth and Launch plans include coordinated multi-platform messaging.",
+      q: "What's included in the Test Drive plan?",
+      a: "One month: 20 CMC Community posts, 1 Sentiment Wave, 1 Featured Creator post, Dashboard + weekly report. It's designed to show you measurable results before you commit to a subscription.",
     },
   ]
 
@@ -881,20 +989,18 @@ function FAQSection() {
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className={`rounded-2xl border transition-all ${
-                openIndex === i
-                  ? 'bg-mist border-midnight/20'
-                  : 'bg-cream border-sand hover:border-midnight/10'
-              }`}
+              className={`rounded-2xl border transition-all ${openIndex === i
+                ? 'bg-mist border-midnight/20'
+                : 'bg-cream border-sand hover:border-midnight/10'
+                }`}
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full px-6 py-5 flex items-center justify-between text-left"
               >
                 <span className="font-display font-semibold text-midnight pr-8">{faq.q}</span>
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-colors ${
-                  openIndex === i ? 'bg-midnight' : 'bg-sand'
-                }`}>
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-colors ${openIndex === i ? 'bg-midnight' : 'bg-sand'
+                  }`}>
                   {openIndex === i ? (
                     <Minus className={`w-4 h-4 ${openIndex === i ? 'text-lime' : 'text-slate'}`} />
                   ) : (
@@ -927,19 +1033,19 @@ function FinalCTASection() {
 
       <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative">
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-midnight mb-6">
-          Ready to drive<br />token sentiment?
+          Ready to build<br />token visibility?
         </h2>
         <p className="text-xl text-slate mb-10 max-w-2xl mx-auto">
-          Start with Experimental for $699 or book a strategy call to discuss your project's specific needs.
+          Start with Test Drive for $1,250 or book a strategy call to discuss your project's specific needs.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="#pricing" className="btn-lime text-lg px-10 py-4 flex items-center justify-center gap-2">
-            Start with $699 Experimental
+            Get started
             <ArrowRight className="w-5 h-5" />
           </a>
           <a href="#" className="btn-secondary text-lg px-10 py-4 flex items-center justify-center gap-2">
-            Book strategy call
+            Book a call
             <ArrowUpRight className="w-5 h-5" />
           </a>
         </div>
@@ -1016,6 +1122,7 @@ export default function HomePage() {
       <ProblemSection />
       <HowItWorksSection />
       <ComparisonSection />
+      <CampaignsSection />
       <PricingSection />
       <SocialProofSection />
       <FAQSection />
