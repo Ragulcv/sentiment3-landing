@@ -68,7 +68,7 @@ function Navigation() {
             <a href="#pricing" className="text-slate hover:text-midnight font-medium transition-colors">
               View plans
             </a>
-            <a href="#final-cta" className="btn-primary">
+            <a href="https://cal.com/sentiment3/30min" className="btn-primary">
               <span className="flex items-center gap-2">
                 Get started
                 <ArrowUpRight className="w-4 h-4" />
@@ -103,7 +103,7 @@ function Navigation() {
                   {item}
                 </a>
               ))}
-              <a href="#final-cta" className="btn-lime text-center mt-4" onClick={() => setMobileOpen(false)}>
+              <a href="https://cal.com/sentiment3/30min" className="btn-lime text-center mt-4" onClick={() => setMobileOpen(false)}>
                 Get started
               </a>
             </div>
@@ -152,7 +152,7 @@ function HeroSection() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <a href="#pricing" className="btn-lime flex items-center justify-center gap-2 text-lg px-8 py-4">
+              <a href="https://cal.com/sentiment3/30min" className="btn-lime flex items-center justify-center gap-2 text-lg px-8 py-4">
                 Get started
                 <ArrowRight className="w-5 h-5" />
               </a>
@@ -866,12 +866,12 @@ function PricingSection() {
                 ))}
               </ul>
 
-              <button className={`w-full py-3 rounded-full font-display font-medium transition-all mt-auto ${plan.highlight
+              <a href="https://cal.com/sentiment3/30min" className={`w-full py-3 rounded-full font-display font-medium transition-all mt-auto text-center ${plan.highlight
                 ? 'bg-lime text-midnight hover:bg-lime-dim'
                 : 'bg-midnight text-white hover:bg-charcoal'
                 }`}>
                 Get started
-              </button>
+              </a>
             </div>
           ))}
         </div>
@@ -1040,11 +1040,11 @@ function FinalCTASection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#pricing" className="btn-lime text-lg px-10 py-4 flex items-center justify-center gap-2">
+          <a href="https://cal.com/sentiment3/30min" className="btn-lime text-lg px-10 py-4 flex items-center justify-center gap-2">
             Get started
             <ArrowRight className="w-5 h-5" />
           </a>
-          <a href="#" className="btn-secondary text-lg px-10 py-4 flex items-center justify-center gap-2">
+          <a href="https://cal.com/sentiment3/30min" className="btn-secondary text-lg px-10 py-4 flex items-center justify-center gap-2">
             Book a call
             <ArrowUpRight className="w-5 h-5" />
           </a>
