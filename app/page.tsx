@@ -583,7 +583,7 @@ function ComparisonSection() {
             <h3 className="font-display font-bold text-xl text-white mb-6 relative">Sentiment3</h3>
             <div className="space-y-4 relative">
               {[
-                '$1,250-$5,900/month',
+                '$1,500 one-time to $6,499/month',
                 'Full transparency',
                 'Cancel anytime',
                 'Productized system',
@@ -733,27 +733,28 @@ function PricingSection() {
   const plans = [
     {
       name: 'Test Drive',
-      price: '$1,250',
-      period: 'one-time',
-      desc: 'Proof before commitment',
+      price: '$1,500',
+      period: '(one-time, 15 days)',
+      desc: 'Validate before scaling',
       features: [
-        '20 CMC Community posts / month',
-        '1 Sentiment Wave / month',
-        '1 Featured Creator post / month',
-        'Dashboard + weekly report',
+        '8 Creator activations',
+        '1 Sentiment Wave',
+        '20 CMC Community posts',
+        'Dashboard access',
+        'Performance summary',
       ],
       highlight: false,
       badge: null,
     },
     {
       name: 'Core',
-      price: '$1,950',
+      price: '$2,500',
       period: '/month',
       desc: 'Always-on presence',
       features: [
-        '30 CMC Community posts / month',
+        '20 Creator activations / month',
         '2 Sentiment Waves / month',
-        '2 Featured Creator posts / month',
+        '30 CMC Community posts / month',
         'Dashboard + weekly report',
         '1 strategy call / month',
       ],
@@ -762,36 +763,42 @@ function PricingSection() {
     },
     {
       name: 'Growth',
-      price: '$3,750',
+      price: '$4,000',
       period: '/month',
       desc: 'For scaling projects',
       features: [
-        '40 CMC Community posts / month',
+        '30 Creator activations / month',
         '3 Sentiment Waves / month',
-        '4 Featured Creator posts / month',
-        'Binance Square cadence included',
+        '40 CMC Community posts / month',
         'Dedicated manager',
-        'Dashboard + weekly report + optimization notes',
+        'Optimization notes + weekly reporting',
       ],
       highlight: true,
       badge: 'Most popular',
     },
     {
       name: 'Launch',
-      price: '$5,900',
+      price: '$6,499',
       period: '/month',
-      desc: 'For major launches',
+      desc: 'For major expansions',
       features: [
-        '60 CMC Community posts / month',
+        '45 Creator activations / month',
         '4 Sentiment Waves / month',
-        '8 Featured Creator posts / month',
-        'Binance Square priority',
-        'Priority response SLA',
-        'Weekly executive summary',
+        '60 CMC Community posts / month',
+        'Priority execution',
+        'Executive performance summary',
       ],
       highlight: false,
       badge: null,
     },
+  ]
+  const addOns = [
+    'AMA coordination & promotion',
+    'Exclusive KOL activations',
+    '10-Wave Sentiment Packages',
+    'Top Chart ranking pushes',
+    'Custom campaign execution',
+    'Dedicated CMC ad-style distribution',
   ]
 
   return (
@@ -804,7 +811,7 @@ function PricingSection() {
             Simple, transparent pricing
           </h2>
           <p className="text-xl text-slate">
-            Start with Test Drive to validate. Scale when you're ready. Cancel anytime.
+            Structured sentiment distribution designed to move markets. Scale when you're ready. Cancel anytime.
           </p>
         </div>
 
@@ -833,12 +840,12 @@ function PricingSection() {
                 <p className={`text-sm mb-4 ${plan.highlight ? 'text-white/60' : 'text-slate'}`}>
                   {plan.desc}
                 </p>
-                <div className="flex items-baseline gap-1">
+                <div className="space-y-1">
                   <span className={`text-4xl font-display font-bold ${plan.highlight ? 'text-lime' : 'text-midnight'
                     }`}>
                     {plan.price}
                   </span>
-                  <span className={plan.highlight ? 'text-white/50' : 'text-slate'}>
+                  <span className={`text-lg ${plan.highlight ? 'text-white/50' : 'text-slate'}`}>
                     {plan.period}
                   </span>
                 </div>
@@ -876,13 +883,30 @@ function PricingSection() {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-slate mb-4">
-            All plans include dashboard access and Slack support. Need custom? <a href="#final-cta" className="text-midnight underline">Let's talk</a>
-          </p>
-          <p className="text-sm text-slate">
-            <strong className="text-midnight">Add-ons:</strong> Extra Sentiment Waves, Featured Creator packs, and CPV Campaigns for major announcements.
-          </p>
+        <div className="mt-12 bg-mist rounded-3xl p-8 lg:p-10 border border-sand">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="font-display font-bold text-2xl text-midnight mb-3">
+              Custom Campaigns & Add-Ons
+            </h3>
+            <p className="text-slate mb-6">
+              Need more firepower? Activate additional distribution layers anytime.
+            </p>
+
+            <ul className="grid sm:grid-cols-2 gap-3 mb-6">
+              {addOns.map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full bg-midnight flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-3 h-3 text-lime" />
+                  </div>
+                  <span className="text-sm text-slate">{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <p className="text-sm text-slate">
+              All campaigns can be structured on CPV or custom budget basis.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -907,7 +931,7 @@ function SocialProofSection() {
             Join 20 founding projects
           </h2>
           <p className="text-xl text-white/60">
-            Early access pricing won't last. Lock in Test Drive at $1,250 before we scale.
+            Early access pricing won't last. Lock in Test Drive at $1,500 before we scale.
           </p>
         </div>
 
@@ -969,7 +993,7 @@ function FAQSection() {
     },
     {
       q: "What's included in the Test Drive plan?",
-      a: "One month: 20 CMC Community posts, 1 Sentiment Wave, 1 Featured Creator post, Dashboard + weekly report. It's designed to show you measurable results before you commit to a subscription.",
+      a: "15 days: 8 Creator activations, 1 Sentiment Wave, 20 CMC Community posts, Dashboard access, and a Performance summary. It's designed to validate traction before you scale into a monthly plan.",
     },
   ]
 
@@ -1036,7 +1060,7 @@ function FinalCTASection() {
           Ready to build<br />token visibility?
         </h2>
         <p className="text-xl text-slate mb-10 max-w-2xl mx-auto">
-          Start with Test Drive for $1,250 or book a strategy call to discuss your project's specific needs.
+          Start with Test Drive for $1,500 or book a strategy call to discuss your project's specific needs.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1084,20 +1108,6 @@ function Footer() {
             ))}
           </div>
 
-          {/* Socials */}
-          <div className="flex items-center gap-3">
-            {['X', 'TG', 'DC'].map((social) => (
-              <a
-                key={social}
-                href="#"
-                className="w-10 h-10 rounded-full bg-charcoal hover:bg-lime flex items-center justify-center transition-colors group"
-              >
-                <span className="text-white/70 group-hover:text-midnight font-display font-bold text-sm">
-                  {social}
-                </span>
-              </a>
-            ))}
-          </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 text-center">
